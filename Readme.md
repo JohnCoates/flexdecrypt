@@ -6,6 +6,8 @@ This is a decryption tool for research purposes. It uses mremap_encrypted to dec
 2. Transfer it to your device.
 3. Use Filza to install it via UI, or use the command line: `dpkg -i flexdecrypt.deb`
 
+If you're on iOS 12.1 or lower, use dpkg directly, and receive an error, you may need to resolve dependencies with: `apt-get -f -y --allow-unauthenticated install`
+
 Latest release also includes the flexdecrypt binary in case you want to install it yourself.
 
 ### Build from source
