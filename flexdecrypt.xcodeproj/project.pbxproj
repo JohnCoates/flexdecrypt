@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA8FFD3D24ABB7D0008FD73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8FFD3C24ABB7D0008FD73C /* Assets.xcassets */; };
+		FA8FFD4024ABB7D0008FD73C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8FFD3E24ABB7D0008FD73C /* LaunchScreen.storyboard */; };
+		FA8FFD4B24ABBDB0008FD73C /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = FA8FFD4A24ABBDB0008FD73C /* ArgumentParser */; };
+		FA8FFD4D24ABBE14008FD73C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD4C24ABBE14008FD73C /* main.swift */; };
+		FA8FFD5024ABBE9C008FD73C /* MachOFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD4F24ABBE9C008FD73C /* MachOFile.swift */; };
+		FA8FFD5224ABBEB8008FD73C /* MachOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD5124ABBEB8008FD73C /* MachOError.swift */; };
+		FA8FFD5524ABBF10008FD73C /* FLXLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD5424ABBF10008FD73C /* FLXLog.swift */; };
+		FA8FFD5724ABBFA0008FD73C /* MachOSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD5624ABBFA0008FD73C /* MachOSlice.swift */; };
+		FA8FFD5924ABBFB0008FD73C /* MachOBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD5824ABBFB0008FD73C /* MachOBinary.swift */; };
+		FA8FFD5B24ABC02C008FD73C /* MachOEncryptionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD5A24ABC02C008FD73C /* MachOEncryptionInfo.swift */; };
+		FA8FFD6024ABC05B008FD73C /* FLXSystemApi.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD5E24ABC05B008FD73C /* FLXSystemApi.m */; };
+		FA8FFD6324ABC09E008FD73C /* FLXPrivateApi.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD6224ABC09E008FD73C /* FLXPrivateApi.mm */; };
+		FA8FFD6524ABC0BE008FD73C /* ArchitectureValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD6424ABC0BE008FD73C /* ArchitectureValue.swift */; };
+		FA8FFD6724ABC0D1008FD73C /* MachOStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD6624ABC0D1008FD73C /* MachOStructs.swift */; };
+		FA8FFD6C24ABC0F5008FD73C /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD6924ABC0F4008FD73C /* DataConvertible.swift */; };
+		FA8FFD6D24ABC0F5008FD73C /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD6A24ABC0F5008FD73C /* DataView.swift */; };
+		FA8FFD6E24ABC0F5008FD73C /* BinaryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD6B24ABC0F5008FD73C /* BinaryError.swift */; };
+		FA8FFD7024ABC116008FD73C /* MachOHeader+DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD6F24ABC116008FD73C /* MachOHeader+DataConvertible.swift */; };
+		FA8FFD7224ABC130008FD73C /* MachOHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD7124ABC130008FD73C /* MachOHeader.swift */; };
+		FA8FFD7424ABC141008FD73C /* MachOLoadCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD7324ABC141008FD73C /* MachOLoadCommand.swift */; };
+		FA8FFD7A24ABC18D008FD73C /* MachOSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD7924ABC18D008FD73C /* MachOSegment.swift */; };
+		FA8FFD7D24ABDC08008FD73C /* MachOFile+SpawnDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD7C24ABDC08008FD73C /* MachOFile+SpawnDecrypt.swift */; };
+		FA8FFD8024ABDC4B008FD73C /* Int+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD7F24ABDC4B008FD73C /* Int+Convenience.swift */; };
+		FA8FFD8224ABE516008FD73C /* MachOFile+Decrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD8124ABE516008FD73C /* MachOFile+Decrypt.swift */; };
+		FA8FFD8524AC133E008FD73C /* DecryptFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD8424AC133E008FD73C /* DecryptFile.swift */; };
+		FA8FFD8824AC165C008FD73C /* FlexDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD8724AC165C008FD73C /* FlexDecrypt.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA8FFD3024ABB7CB008FD73C /* flexdecrypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flexdecrypt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8FFD3C24ABB7D0008FD73C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA8FFD3F24ABB7D0008FD73C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA8FFD4124ABB7D0008FD73C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA8FFD4724ABB96A008FD73C /* flexdecrypt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = flexdecrypt.entitlements; path = Source/flexdecrypt.entitlements; sourceTree = SOURCE_ROOT; };
+		FA8FFD4C24ABBE14008FD73C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FA8FFD4F24ABBE9C008FD73C /* MachOFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachOFile.swift; sourceTree = "<group>"; };
+		FA8FFD5124ABBEB8008FD73C /* MachOError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachOError.swift; sourceTree = "<group>"; };
+		FA8FFD5424ABBF10008FD73C /* FLXLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLXLog.swift; sourceTree = "<group>"; };
+		FA8FFD5624ABBFA0008FD73C /* MachOSlice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachOSlice.swift; sourceTree = "<group>"; };
+		FA8FFD5824ABBFB0008FD73C /* MachOBinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachOBinary.swift; sourceTree = "<group>"; };
+		FA8FFD5A24ABC02C008FD73C /* MachOEncryptionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachOEncryptionInfo.swift; sourceTree = "<group>"; };
+		FA8FFD5D24ABC05A008FD73C /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		FA8FFD5E24ABC05B008FD73C /* FLXSystemApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLXSystemApi.m; sourceTree = "<group>"; };
+		FA8FFD5F24ABC05B008FD73C /* FLXSystemApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLXSystemApi.h; sourceTree = "<group>"; };
+		FA8FFD6124ABC09E008FD73C /* FLXPrivateApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLXPrivateApi.h; sourceTree = "<group>"; };
+		FA8FFD6224ABC09E008FD73C /* FLXPrivateApi.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FLXPrivateApi.mm; sourceTree = "<group>"; };
+		FA8FFD6424ABC0BE008FD73C /* ArchitectureValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchitectureValue.swift; sourceTree = "<group>"; };
+		FA8FFD6624ABC0D1008FD73C /* MachOStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachOStructs.swift; sourceTree = "<group>"; };
+		FA8FFD6924ABC0F4008FD73C /* DataConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConvertible.swift; sourceTree = "<group>"; };
+		FA8FFD6A24ABC0F5008FD73C /* DataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		FA8FFD6B24ABC0F5008FD73C /* BinaryError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryError.swift; sourceTree = "<group>"; };
+		FA8FFD6F24ABC116008FD73C /* MachOHeader+DataConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MachOHeader+DataConvertible.swift"; sourceTree = "<group>"; };
+		FA8FFD7124ABC130008FD73C /* MachOHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachOHeader.swift; sourceTree = "<group>"; };
+		FA8FFD7324ABC141008FD73C /* MachOLoadCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachOLoadCommand.swift; sourceTree = "<group>"; };
+		FA8FFD7924ABC18D008FD73C /* MachOSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachOSegment.swift; sourceTree = "<group>"; };
+		FA8FFD7C24ABDC08008FD73C /* MachOFile+SpawnDecrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MachOFile+SpawnDecrypt.swift"; sourceTree = "<group>"; };
+		FA8FFD7F24ABDC4B008FD73C /* Int+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Convenience.swift"; sourceTree = "<group>"; };
+		FA8FFD8124ABE516008FD73C /* MachOFile+Decrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MachOFile+Decrypt.swift"; sourceTree = "<group>"; };
+		FA8FFD8424AC133E008FD73C /* DecryptFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptFile.swift; sourceTree = "<group>"; };
+		FA8FFD8724AC165C008FD73C /* FlexDecrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexDecrypt.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA8FFD2D24ABB7CB008FD73C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA8FFD4B24ABBDB0008FD73C /* ArgumentParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA8FFD2724ABB7CB008FD73C = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD8624AC1642008FD73C /* Source */,
+				FA8FFD8924AC16A2008FD73C /* App Resources */,
+				FA8FFD3124ABB7CB008FD73C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA8FFD3124ABB7CB008FD73C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD3024ABB7CB008FD73C /* flexdecrypt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA8FFD4E24ABBE8E008FD73C /* Mach-O */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD8A24AC18C1008FD73C /* Structure */,
+				FA8FFD7B24ABDC00008FD73C /* Decrypt */,
+				FA8FFD4F24ABBE9C008FD73C /* MachOFile.swift */,
+				FA8FFD5624ABBFA0008FD73C /* MachOSlice.swift */,
+				FA8FFD5124ABBEB8008FD73C /* MachOError.swift */,
+				FA8FFD5824ABBFB0008FD73C /* MachOBinary.swift */,
+			);
+			path = "Mach-O";
+			sourceTree = "<group>";
+		};
+		FA8FFD5324ABBF06008FD73C /* Debugging */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD5424ABBF10008FD73C /* FLXLog.swift */,
+			);
+			path = Debugging;
+			sourceTree = "<group>";
+		};
+		FA8FFD5C24ABC050008FD73C /* C API Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD5F24ABC05B008FD73C /* FLXSystemApi.h */,
+				FA8FFD5E24ABC05B008FD73C /* FLXSystemApi.m */,
+				FA8FFD6124ABC09E008FD73C /* FLXPrivateApi.h */,
+				FA8FFD6224ABC09E008FD73C /* FLXPrivateApi.mm */,
+			);
+			path = "C API Wrappers";
+			sourceTree = "<group>";
+		};
+		FA8FFD6824ABC0E9008FD73C /* Binary Reading */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD6B24ABC0F5008FD73C /* BinaryError.swift */,
+				FA8FFD6924ABC0F4008FD73C /* DataConvertible.swift */,
+				FA8FFD6A24ABC0F5008FD73C /* DataView.swift */,
+			);
+			path = "Binary Reading";
+			sourceTree = "<group>";
+		};
+		FA8FFD7B24ABDC00008FD73C /* Decrypt */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD7C24ABDC08008FD73C /* MachOFile+SpawnDecrypt.swift */,
+				FA8FFD8124ABE516008FD73C /* MachOFile+Decrypt.swift */,
+			);
+			path = Decrypt;
+			sourceTree = "<group>";
+		};
+		FA8FFD7E24ABDC42008FD73C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD7F24ABDC4B008FD73C /* Int+Convenience.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA8FFD8324AC1332008FD73C /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD8724AC165C008FD73C /* FlexDecrypt.swift */,
+				FA8FFD8424AC133E008FD73C /* DecryptFile.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		FA8FFD8624AC1642008FD73C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD4C24ABBE14008FD73C /* main.swift */,
+				FA8FFD8324AC1332008FD73C /* Commands */,
+				FA8FFD4E24ABBE8E008FD73C /* Mach-O */,
+				FA8FFD6824ABC0E9008FD73C /* Binary Reading */,
+				FA8FFD7E24ABDC42008FD73C /* Extensions */,
+				FA8FFD5C24ABC050008FD73C /* C API Wrappers */,
+				FA8FFD5324ABBF06008FD73C /* Debugging */,
+				FA8FFD5D24ABC05A008FD73C /* Bridging.h */,
+				FA8FFD4724ABB96A008FD73C /* flexdecrypt.entitlements */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FA8FFD8924AC16A2008FD73C /* App Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD4124ABB7D0008FD73C /* Info.plist */,
+				FA8FFD3C24ABB7D0008FD73C /* Assets.xcassets */,
+				FA8FFD3E24ABB7D0008FD73C /* LaunchScreen.storyboard */,
+			);
+			path = "App Resources";
+			sourceTree = "<group>";
+		};
+		FA8FFD8A24AC18C1008FD73C /* Structure */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FFD7124ABC130008FD73C /* MachOHeader.swift */,
+				FA8FFD6F24ABC116008FD73C /* MachOHeader+DataConvertible.swift */,
+				FA8FFD7324ABC141008FD73C /* MachOLoadCommand.swift */,
+				FA8FFD7924ABC18D008FD73C /* MachOSegment.swift */,
+				FA8FFD6624ABC0D1008FD73C /* MachOStructs.swift */,
+				FA8FFD6424ABC0BE008FD73C /* ArchitectureValue.swift */,
+				FA8FFD5A24ABC02C008FD73C /* MachOEncryptionInfo.swift */,
+			);
+			path = Structure;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA8FFD2F24ABB7CB008FD73C /* flexdecrypt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA8FFD4424ABB7D0008FD73C /* Build configuration list for PBXNativeTarget "flexdecrypt" */;
+			buildPhases = (
+				FA8FFD2C24ABB7CB008FD73C /* Sources */,
+				FA8FFD2D24ABB7CB008FD73C /* Frameworks */,
+				FA8FFD2E24ABB7CB008FD73C /* Resources */,
+				FA8FFD4824ABB974008FD73C /* Codesign */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = flexdecrypt;
+			packageProductDependencies = (
+				FA8FFD4A24ABBDB0008FD73C /* ArgumentParser */,
+			);
+			productName = flexdecrypt;
+			productReference = FA8FFD3024ABB7CB008FD73C /* flexdecrypt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA8FFD2824ABB7CB008FD73C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "John Coates";
+				TargetAttributes = {
+					FA8FFD2F24ABB7CB008FD73C = {
+						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
+					};
+				};
+			};
+			buildConfigurationList = FA8FFD2B24ABB7CB008FD73C /* Build configuration list for PBXProject "flexdecrypt" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA8FFD2724ABB7CB008FD73C;
+			packageReferences = (
+				FA8FFD4924ABBDB0008FD73C /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
+			productRefGroup = FA8FFD3124ABB7CB008FD73C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA8FFD2F24ABB7CB008FD73C /* flexdecrypt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA8FFD2E24ABB7CB008FD73C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA8FFD4024ABB7D0008FD73C /* LaunchScreen.storyboard in Resources */,
+				FA8FFD3D24ABB7D0008FD73C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA8FFD4824ABB974008FD73C /* Codesign */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Codesign;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -x\nset -e\nexport appPath=$CODESIGNING_FOLDER_PATH\nexport binaryPath=$appPath/$PRODUCT_NAME\nexport entitlementsPath=$CODE_SIGN_ENTITLEMENTS\nexport plistBuddy=/usr/libexec/PlistBuddy\n\nif [ $PLATFORM_NAME = \"iphoneos\" ] && [ $CONFIGURATION = \"Debug\" ]; then\n    echo \"warning: Entitling binary\"\n    pushd ~/Library/MobileDevice/Provisioning\\ Profiles/\n        FILES=./*\n        for file in $FILES\n        do\n            echo \"Reading $file\"\n            found=0\n            security cms -D -i $file > /tmp/profile.plist \n            wildcardAppId=\"Xcode: Wildcard AppID\"\n            currentAppId=$($plistBuddy -c \"Print :AppIDName\" /tmp/profile.plist)\n            if [[ \"$currentAppId\" == \"$wildcardAppId\" ]]; then\n                currentAppId=$($plistBuddy -c \"Print :AppIDName\" /tmp/profile.plist)    \n                ApplicationIdentifierPrefix=$($plistBuddy -c \"Print :ApplicationIdentifierPrefix:0\" /tmp/profile.plist)\n                TeamIdentifier=$($plistBuddy -c \"Print :TeamIdentifier:0\" /tmp/profile.plist)\n                TeamName=$($plistBuddy -c \"Print :TeamName\" /tmp/profile.plist)\n                echo \"Found Wildcard Provisoning Profile\"\n                echo \"ApplicationIdentifierPrefix: $ApplicationIdentifierPrefix\"\n                echo \"TeamIdentifier: $TeamIdentifier\"\n                echo \"TeamName: $TeamName\"\n                found=1\n                rm /tmp/profile.plist\n                break\n            fi\n            \n            rm /tmp/profile.plist\n            \n            if [[ found == 0 ]]; then\n                echo \"Error: Unable to find wildcard provisioning profile!\"\n                exit 1\n            fi\n        done\n    popd\n\n    $plistBuddy -c \"Set :application-identifier $ApplicationIdentifierPrefix.$PRODUCT_BUNDLE_IDENTIFIER\" \"$entitlementsPath\"\n    $plistBuddy -c \"Set :com.apple.developer.team-identifier $TeamIdentifier\" \"$entitlementsPath\"\n\n    codesignIdentity=\"Apple Development: $TeamName\"\n    FRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    find \"${FRAMEWORKS_DIR}\" -perm +111 -type f -exec codesign -fs \"$codesignIdentity\" \"{}\" \\;\n    find \"${FRAMEWORKS_DIR}\" -perm +111 -type f -exec codesign -d \"$codesignIdentity\" \"{}\" \\;\n\n    codesign --deep -fs \"$codesignIdentity\" --entitlements \"${entitlementsPath}\" \"${appPath}\"\n    \n    returnValue=$?\n    \n    codesign -d \"$appPath\"\n    \n    # clear\n    $plistBuddy -c \"Set :application-identifier -\" \"$entitlementsPath\"\n    $plistBuddy -c \"Set :com.apple.developer.team-identifier -\" \"$entitlementsPath\"\n    \n    if [[ $returnValue != 0 ]]; then\n        exit $returnValue;\n    fi\nelif [ $PLATFORM_NAME = \"iphoneos\" ] && [ $CONFIGURATION = \"Release\" ]; then\n    echo \"warning: adhoc codesigning\"\n    export entitlementsPath=$CODE_SIGN_ENTITLEMENTS\n    export newEntitlementsPath=\"$CONFIGURATION_BUILD_DIR/modified.entitlements\"\n    cp \"$entitlementsPath\" \"$newEntitlementsPath\"\n    $plistBuddy -c \"Remove :application-identifier\" \"$newEntitlementsPath\"\n    $plistBuddy -c \"Remove :com.apple.developer.team-identifier\" \"$newEntitlementsPath\"\n    codesign --deep -f -s - --entitlements \"${newEntitlementsPath}\" \"${appPath}\"\n    codesign -d \"$appPath\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA8FFD2C24ABB7CB008FD73C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA8FFD5724ABBFA0008FD73C /* MachOSlice.swift in Sources */,
+				FA8FFD5524ABBF10008FD73C /* FLXLog.swift in Sources */,
+				FA8FFD6024ABC05B008FD73C /* FLXSystemApi.m in Sources */,
+				FA8FFD5B24ABC02C008FD73C /* MachOEncryptionInfo.swift in Sources */,
+				FA8FFD6C24ABC0F5008FD73C /* DataConvertible.swift in Sources */,
+				FA8FFD8524AC133E008FD73C /* DecryptFile.swift in Sources */,
+				FA8FFD7D24ABDC08008FD73C /* MachOFile+SpawnDecrypt.swift in Sources */,
+				FA8FFD6324ABC09E008FD73C /* FLXPrivateApi.mm in Sources */,
+				FA8FFD5224ABBEB8008FD73C /* MachOError.swift in Sources */,
+				FA8FFD7424ABC141008FD73C /* MachOLoadCommand.swift in Sources */,
+				FA8FFD8824AC165C008FD73C /* FlexDecrypt.swift in Sources */,
+				FA8FFD8024ABDC4B008FD73C /* Int+Convenience.swift in Sources */,
+				FA8FFD4D24ABBE14008FD73C /* main.swift in Sources */,
+				FA8FFD5924ABBFB0008FD73C /* MachOBinary.swift in Sources */,
+				FA8FFD7A24ABC18D008FD73C /* MachOSegment.swift in Sources */,
+				FA8FFD6D24ABC0F5008FD73C /* DataView.swift in Sources */,
+				FA8FFD6724ABC0D1008FD73C /* MachOStructs.swift in Sources */,
+				FA8FFD8224ABE516008FD73C /* MachOFile+Decrypt.swift in Sources */,
+				FA8FFD7224ABC130008FD73C /* MachOHeader.swift in Sources */,
+				FA8FFD6524ABC0BE008FD73C /* ArchitectureValue.swift in Sources */,
+				FA8FFD7024ABC116008FD73C /* MachOHeader+DataConvertible.swift in Sources */,
+				FA8FFD6E24ABC0F5008FD73C /* BinaryError.swift in Sources */,
+				FA8FFD5024ABBE9C008FD73C /* MachOFile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA8FFD3E24ABB7D0008FD73C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA8FFD3F24ABB7D0008FD73C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA8FFD4224ABB7D0008FD73C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA8FFD4324ABB7D0008FD73C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA8FFD4524ABB7D0008FD73C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = $PROJECT_DIR/Source/flexdecrypt.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "App Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.johncoates.flexdecrypt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = $PROJECT_DIR/Source/Bridging.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = $PROJECT_DIR/External/include;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA8FFD4624ABB7D0008FD73C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = $PROJECT_DIR/Source/flexdecrypt.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "App Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.johncoates.flexdecrypt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = $PROJECT_DIR/Source/Bridging.h;
+				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = $PROJECT_DIR/External/include;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA8FFD2B24ABB7CB008FD73C /* Build configuration list for PBXProject "flexdecrypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8FFD4224ABB7D0008FD73C /* Debug */,
+				FA8FFD4324ABB7D0008FD73C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA8FFD4424ABB7D0008FD73C /* Build configuration list for PBXNativeTarget "flexdecrypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8FFD4524ABB7D0008FD73C /* Debug */,
+				FA8FFD4624ABB7D0008FD73C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA8FFD4924ABBDB0008FD73C /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA8FFD4A24ABBDB0008FD73C /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA8FFD4924ABBDB0008FD73C /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FA8FFD2824ABB7CB008FD73C /* Project object */;
+}

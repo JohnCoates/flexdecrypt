@@ -1,0 +1,8 @@
+Package: flexdecrypt
+Name: flexdecrypt
+Author: John Coates
+Maintainer: John Coates
+Description: Tool for decrypting iOS apps and Mach-O binaries.
+Version: 1.0
+Section: Tools
+Architecture: iphoneos-arm
