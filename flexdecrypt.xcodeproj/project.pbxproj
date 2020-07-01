@@ -33,6 +33,7 @@
 		FA8FFD8224ABE516008FD73C /* MachOFile+Decrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD8124ABE516008FD73C /* MachOFile+Decrypt.swift */; };
 		FA8FFD8524AC133E008FD73C /* DecryptFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD8424AC133E008FD73C /* DecryptFile.swift */; };
 		FA8FFD8824AC165C008FD73C /* FlexDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FFD8724AC165C008FD73C /* FlexDecrypt.swift */; };
+		FA98596524ACE4DF003D19EB /* control in Resources */ = {isa = PBXBuildFile; fileRef = FA98596324ACE4DF003D19EB /* control */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		FA8FFD8124ABE516008FD73C /* MachOFile+Decrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MachOFile+Decrypt.swift"; sourceTree = "<group>"; };
 		FA8FFD8424AC133E008FD73C /* DecryptFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptFile.swift; sourceTree = "<group>"; };
 		FA8FFD8724AC165C008FD73C /* FlexDecrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexDecrypt.swift; sourceTree = "<group>"; };
+		FA98596324ACE4DF003D19EB /* control */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8FFD8624AC1642008FD73C /* Source */,
+				FA98595E24ACE4DF003D19EB /* Package */,
 				FA8FFD8924AC16A2008FD73C /* App Resources */,
 				FA8FFD3124ABB7CB008FD73C /* Products */,
 			);
@@ -206,6 +209,22 @@
 			path = Structure;
 			sourceTree = "<group>";
 		};
+		FA98595E24ACE4DF003D19EB /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				FA98596224ACE4DF003D19EB /* DEBIAN */,
+			);
+			path = Package;
+			sourceTree = "<group>";
+		};
+		FA98596224ACE4DF003D19EB /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				FA98596324ACE4DF003D19EB /* control */,
+			);
+			path = DEBIAN;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA98596524ACE4DF003D19EB /* control in Resources */,
 				FA8FFD4024ABB7D0008FD73C /* LaunchScreen.storyboard in Resources */,
 				FA8FFD3D24ABB7D0008FD73C /* Assets.xcassets in Resources */,
 			);
@@ -395,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -449,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -470,11 +490,13 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "App Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					/usr/lib/libswift/stable,
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.johncoates.flexdecrypt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -497,11 +519,13 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "App Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					/usr/lib/libswift/stable,
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.johncoates.flexdecrypt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
