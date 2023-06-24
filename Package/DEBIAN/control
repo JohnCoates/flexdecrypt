@@ -1,6 +1,6 @@
 Package: flexdecrypt
 Name: flexdecrypt
-Depends: firmware (>=12.2) | org.swift.libswift (>=5.0), firmware (>= 9.0)
+Depends: firmware (>=12.2) | org.swift.libswift (>=5.0), firmware (>= 11.0)
 Author: John Coates
 Maintainer: John Coates
 Description: Tool for decrypting iOS apps and Mach-O binaries.
