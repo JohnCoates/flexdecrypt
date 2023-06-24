@@ -19,5 +19,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: flexdecrypt.deb
+          name: Builds
           path: ./*.deb
