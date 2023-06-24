@@ -1,0 +1,19 @@
+name: Build
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build flexdecrypt
+        run: ./Scripts/build.sh
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: flexdecrypt.deb
+          path: ./*.deb
